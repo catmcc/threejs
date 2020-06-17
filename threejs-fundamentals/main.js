@@ -11,6 +11,7 @@ function main() {
     camera.position.z = 3; //mess around with this
 
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xAAAAAA);
     
     
 
@@ -82,8 +83,8 @@ function main() {
         cubes.forEach((cube, ndx) => {
             const speed = 1 + ndx * .1;
             const rot = time * speed;
-            cube.rotation.x = rot;
-            cube.rotation.y = rot;
+            cube.rotation.x = 2.5*rot;
+            cube.rotation.y = 2.5*rot;
         });
         
         renderer.render(scene, camera);
